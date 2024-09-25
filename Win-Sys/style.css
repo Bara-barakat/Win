@@ -1,0 +1,278 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  cursor: url(./pointer-mouse.svg), auto;
+}
+
+body {
+  background-image: url(./1342199.png);
+  background-size: cover;
+}
+
+body:hover {
+  cursor: url(./hand-pointer-solid.svg), pointer;
+}
+
+.navbar {
+  position: fixed;
+  bottom: 20px;
+  right: 360px;
+  background-color: #f0f8ff65;
+  width: 800px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .fe {
+  padding: 10px;
+}
+
+.navbar .fe a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.navbar img {
+  width: 30px;
+  margin: 7px;
+}
+
+img:hover {
+  mix-blend-mode: color;
+  transform: scale(1.2);
+}
+
+/* context */
+
+.context-menu {
+  position: absolute;
+  text-align: start;
+  background: #d3d3d38c;
+  /* background: lightgray; */
+  border: 1px solid black;
+}
+
+.context-menu ul {
+  padding: 0px;
+  margin: 0px;
+  min-width: 150px;
+  list-style: none;
+}
+
+.context-menu ul li {
+  padding-bottom: 7px;
+  padding-top: 7px;
+  border: 1px solid black;
+}
+
+.context-menu ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+}
+
+.context-menu ul li a img {
+  width: 20px;
+}
+
+.context-menu ul li:hover {
+  background: darkgray;
+}
+
+.ser {
+  position: fixed;
+  left: 600px;
+  text-align: center;
+  margin-top: 200px;
+  display: none;
+}
+
+.ser input {
+  padding: 10px;
+  border-radius: 20px;
+  outline: none;
+  border: 2px solid #0000ff38;
+  width: 300px;
+  z-index: 2;
+}
+
+#calculator {
+  position: absolute;
+  left: 180px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 6;
+  display: none;
+}
+
+#calculator input {
+  outline: none;
+  border-radius: 10px 10px 0 0;
+  font-size: xx-large;
+  padding: 40px 4px;
+  background-color: aliceblue;
+}
+
+#calculator #keys {
+  padding: 10px;
+  border: 2px solid black;
+}
+
+#calculator #keys button {
+  padding: 10px 14px;
+  border-radius: 50%;
+  font-size: larger;
+  margin: 10px;
+  background-color: #fff9f0;
+  cursor: pointer;
+}
+
+#calculator #keys button:hover {
+  background-color: aliceblue;
+}
+
+.set {
+  position: fixed;
+  top: 20px;
+  left: 920px;
+  width: 360px;
+  text-align: center;
+  border: 2px solid #ffebcdc9;
+  border-radius: 20px 20px 0 0;
+  display: none;
+}
+
+.set h2 {
+  background-color: #8992929f;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 20px 20px 0 0;
+}
+
+.set img {
+  width: 80%;
+}
+
+.image-container:hover .imgs1:hover ~ body {
+  background-image: url(./1342199.png);
+}
+
+.image-container:hover .imgs2:hover ~ body {
+  background-image: url(./Shapes.png);
+}
+
+.gro {
+  position: fixed;
+  left: -70px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.gr,
+.vi {
+  margin-top: 20px;
+}
+
+.gro img {
+  width: 35%;
+}
+
+.ppop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+.ppop.fade {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.ppop.fade.in {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+.ppop:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+.ppop .content {
+  position: relative;
+  background: #fff;
+  padding: 20px;
+  width: 480px;
+  max-width: 100%;
+  min-height: 100px;
+  max-height: 400px;
+  border-radius: 0;
+  box-shadow: 5px 8px 2px #000;
+  z-index: 1;
+}
+.ppop .content[data-title] {
+  padding-top: 60px;
+}
+.ppop .content[data-title]:before {
+  content: attr(data-title);
+  position: absolute;
+  background: #ff4e01;
+  color: #fff;
+  left: 0;
+  right: 0;
+  top: 0px;
+  padding: 10px;
+}
+.ppop .content[data-title]:after {
+  content: "";
+  position: absolute;
+  background: #ff4e01;
+  color: #fff;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  width: 0%;
+  height: 10px;
+}
+.ppop.fade.in .content[data-title]:after {
+  width: 100%;
+  transition: width 4s linear;
+}
+.ppop.fade.in .content {
+  animation: ppopanim 1.5s forwards;
+}
+@keyframes ppopanim {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

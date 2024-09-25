@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="clock.css" />
+    <link rel="stylesheet" href="awin.css" />
+    <title>Win</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="fe">
+        <a onclick="showSer()" href="#Search">
+          <img src="./magnifying-glass-solid.svg" alt="img" />Search</a
+        >
+      </div>
+      <div class="fe">
+        <a onclick="sett()" href="#settings">
+          <img src="./gear-solid.svg" alt="img" />Settings</a
+        >
+      </div>
+      <div class="fe">
+        <a
+          onclick="$.Popup('You Need Hide Files', { title: 'folder hidden' }, hf());"
+          href="#Folder"
+        >
+          <img src="./folder-open-solid.svg" alt="img" />Folder</a
+        >
+      </div>
+      <div class="fe">
+        <a onclick="showCalc()" href="#Calc">
+          <img class="calc" src="./calculator-solid.svg" alt="img" />Calc...</a
+        >
+      </div>
+      <div class="fe">
+        <a href="#Secur">
+          <img src="./file-shield-solid.svg" alt="img" />Secure Connected
+          Internet</a
+        >
+        <div class="title"></div>
+        <ul></ul>
+        <div class="reload"></div>
+      </div>
+    </div>
+
+    <div class="ser">
+      <input type="text" placeholder="Search" />
+    </div>
+
+    <!-- context -->
+    <div id="contextMenu" class="context-menu" style="display: none">
+      <ul>
+        <li><a onclick="ref()" href="#">Refresh</a></li>
+        <li>
+          <a href="#" onclick="next()"
+            ><img src="./Shapes.png" alt="img" />change img background</a
+          >
+        </li>
+        <li>
+          <a onclick="sett()" href="#"
+            ><img src="./wrench-solid.svg" alt="img" /> settings</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div class="pclock">
+      <div class="clock">
+        <div class="hand hour" data-hour-hand></div>
+        <div class="hand minute" data-minute-hand></div>
+        <div class="hand second" data-second-hand></div>
+        <div class="number number1">1</div>
+        <div class="number number2">2</div>
+        <div class="number number3">3</div>
+        <div class="number number4">4</div>
+        <div class="number number5">5</div>
+        <div class="number number6">6</div>
+        <div class="number number7">7</div>
+        <div class="number number8">8</div>
+        <div class="number number9">9</div>
+        <div class="number number10">10</div>
+        <div class="number number11">11</div>
+        <div class="number number12">12</div>
+      </div>
+    </div>
+
+    <div class="calc" id="calculator">
+      <input id="display" readonly />
+      <div id="keys">
+        <button onclick="append('+')">+</button>
+        <button onclick="append('7')">7</button>
+        <button onclick="append('8')">8</button>
+        <button onclick="append('9')">9</button>
+        <button onclick="append('-')">-</button>
+        <button onclick="append('4')">4</button>
+        <button onclick="append('5')">5</button>
+        <button onclick="append('6')">6</button>
+        <button onclick="append('*')">*</button>
+        <button onclick="append('1')">1</button>
+        <button onclick="append('2')">2</button>
+        <button onclick="append('3')">3</button>
+        <button onclick="append('/')">/</button>
+        <button onclick="append('0')">0</button>
+        <button onclick="append('.')">.</button>
+        <button onclick="calculate()">=</button>
+        <button onclick="clearDisplay()">C</button>
+      </div>
+    </div>
+
+    <div class="set sett">
+      <h2>Settings</h2>
+      <img class="imgs1" src="./1342199.png" alt="img" />
+      <img class="imgs2" src="./Shapes.png" alt="img" />
+    </div>
+
+    <div class="gro">
+      <div class="ab">
+        <img onclick="aw()" src="./id-card-solid.svg" alt="img" />
+        <h2>About Win</h2>
+      </div>
+
+      <div class="gr">
+        <a target="_blank" href="./Grocery/index.html"
+          ><img src="./list-solid.svg" alt="img"
+        /></a>
+        <h2>List tasks</h2>
+      </div>
+
+      <div class="vi">
+        <a target="_blank" href="./Video/index.html"
+          ><img src="./headphones-solid.svg" alt="img"
+        /></a>
+        <h2>Video</h2>
+      </div>
+    </div>
+
+    <div class="awi">
+      <div class="container">
+        <div class="row">
+          <div class="column left">
+            <span class="dot" style="background: #ed594a"></span>
+            <span class="dot" style="background: #fdd800"></span>
+            <span class="dot" style="background: #5ac05a"></span>
+          </div>
+          <div class="column middle">
+            <input type="text" value="http://www.Bara.com" />
+          </div>
+          <div class="column right">
+            <div style="float: right">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="content">
+          <h3>Browser Window</h3>
+          <p>This system was created by Bara and all rights reserved.</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="pop.js"></script>
+    <script src="detected.js"></script>
+    <script src="clock.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
